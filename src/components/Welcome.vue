@@ -46,6 +46,7 @@
             <Category v-for="index in 8" :key="cat"/>
         </div>
 
+
     </main>
     <Footer />
   </div>

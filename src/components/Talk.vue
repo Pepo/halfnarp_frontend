@@ -48,19 +48,30 @@
             <span class="talk__plus-one">+1</span>
             vote
         </button>
-        <a href="#" class="talk__link" v-on:click="showTalk">
+        <a href="#" class="talk__link" v-on:click="hideShowTalk">
             <h4>Talk Title</h4>
             <div class="talk__authors">Author Name, Name of Author</div>
         </a>
+        <Modal v-bind:showTalk="showTalk" />
     </div>
 </template>
 
 <script>
+import Modal from '../components/Modal.vue'
+
 export default {
   name: 'Talk',
+  components: {
+    'Modal': Modal
+  },
+  data: function () {
+    return {
+      showTalk: false
+    }
+  },
   methods: {
-    showTalk: function () {
-      alert('click')
+    hideShowTalk: function () {
+      this.showTalk = true
     }
   }
 }
