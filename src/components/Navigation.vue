@@ -15,8 +15,6 @@
      padding: 0.2rem 0.5rem;
      font-size: 1rem;
      margin: 0.5rem;
-     background-color: #000;
-     color: #FFF;
  }
  .navigation__headline {
      color: #FFF;

@@ -2,8 +2,9 @@
 .talk {
     font-size: 0.9rem;
     background-color: #F2F0F0;
-    padding: 0.5rem;
     position: relative;
+    margin: 0.75em 0;
+    display: block;
 }
 .talk__button{
     position: absolute;
@@ -15,9 +16,10 @@
     color: #FFF;
     padding: 0.5rem;
     cursor: pointer;
-    transition: background-color 1s;
+    transition: background-color 0.5s;
+    border-left: 1px solid #FFF;
     &:hover{
-        transition: background-color 1s;
+        transition: background-color 0.5s;
         background-color: #029319;
     }
 }
@@ -25,6 +27,18 @@
     font-size: 1.5rem;
     line-height: 1;
     display: block;
+}
+.talk__link{
+    color: #000;
+    display: block;
+    padding: 0.5rem;
+    transition: background-color 0.5s;
+    &:hover {
+        transition: background-color color 0.5s;
+        background-color: #000;
+        color: #FFF;
+    }
+    text-decoration: none;
 }
 </style>
 
@@ -34,13 +48,20 @@
             <span class="talk__plus-one">+1</span>
             vote
         </button>
-        <h4>Talk Title</h4>
-        <div class="talk__authors">Author Name, Name of Author</div>
+        <a href="#" class="talk__link" v-on:click="showTalk">
+            <h4>Talk Title</h4>
+            <div class="talk__authors">Author Name, Name of Author</div>
+        </a>
     </div>
 </template>
 
 <script>
 export default {
-  name: 'Talk'
+  name: 'Talk',
+  methods: {
+    showTalk: function () {
+      alert('click')
+    }
+  }
 }
 </script>

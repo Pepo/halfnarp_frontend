@@ -2,6 +2,9 @@
  .header {
  	background-color: #fff;
     padding: 1rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0.5rem;
  }
 
  .header__logo {
